@@ -28,10 +28,10 @@ while score < 50:
     score += 1
     continue
 
-differences = []
-for state in states.state:
-    if state not in correct_guesses:
-        differences.append(state)
+differences = [state for state in states.state if state not in correct_guesses]
+# for state in states.state:
+#     if state not in correct_guesses:
+#         differences.append(state)
 
 missed_states = {
     "state": differences
